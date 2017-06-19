@@ -3,6 +3,7 @@ body {
 	padding: 0px;
 	font-family: sans-serif;
 	user-select: none;
+	background-color: #F0F0F0;
 }
 
 .title {
@@ -15,7 +16,7 @@ body {
 	padding: 12px;
 	box-sizing: border-box;
 	margin: 0px auto;
-	border: 1px solid #eee;
+	border: 1px solid #bfbfbf;
 	border-radius: 8px;
 	box-shadow: 4px 4px 12px 0px rgba(0,0,0,.18);
 }
@@ -89,4 +90,10 @@ body {
 .notice a {
 	text-decoration: none;
 	color: #424242;
+}
+
+.fork-me {
+	position: absolute;
+	top: 0px;
+	right: 0px;
 }
