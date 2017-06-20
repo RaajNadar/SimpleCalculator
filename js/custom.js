@@ -1,38 +1,42 @@
 $(document).ready(function() {
-	var one, two, op, result;
+	var op;
 
-	//For calculation
+	function appendTxt() {
+		$('#calc').removeAttr('readonly');
+		$('#calc').val(op);
+		$('#calc').delay(2000).prop('readonly', true);
+	}
+
+	function clear() {
+		$('#calc').val('0.');
+	}
+
+	//For appending value to calc display
 	$('.btn-group button').on('click', function() {
-		op = $(this).attr('class');
-		one = $('#one').val();
-		two = $('#two').val();
-
-		switch (op) {
-		case 'plus':
-			result = parseInt(one) + parseInt(two);
-			break;
-		case 'minus':
-			result = one - two;
-			break;
-		case 'divide':
-			result = one / two;
-			break;
-		case 'multiply':
-			result = one * two;
-			break;
-		case 'percent':
-			result = (one / two)*100;
-			break;
-		default :
-			result = 0;
+		if ( $(this).text() != '=' && $(this).text() != 'C' ) {
+			if ( $('#calc').val() == 0 ) {
+				op = $(this).text();
+				appendTxt();
+			} else {
+				op += $(this).text();
+				appendTxt();
+			}
 		}
-		$('#result').val(result);
+	});
+
+	//Display result
+	$('#result').on('click', function() {
+		var result = eval($('#calc').val());
+		$('#calc').val(result);
+		op = result;
+	});
+
+	// Clear data
+	$('.clear').on('click', function() {
+		clear();
 	});
 
 	//Click event for fork me
-	$('selector').action
-
-	jQuery('selector').action
 	$('.fork-me img').on('click', function() {
 		window.location.href = "http://github.com/RaajNadar/SimpleCalculator";
 	});

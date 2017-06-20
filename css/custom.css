@@ -3,7 +3,7 @@ body {
 	padding: 0px;
 	font-family: sans-serif;
 	user-select: none;
-	background-color: #F0F0F0;
+	background-color: #fff;
 }
 
 .title {
@@ -12,11 +12,11 @@ body {
 }
 
 .container {
-	width: 30%;
+	width: 24%;
 	padding: 12px;
 	box-sizing: border-box;
 	margin: 0px auto;
-	border: 1px solid #bfbfbf;
+	border: 1px solid #eee;
 	border-radius: 8px;
 	box-shadow: 4px 4px 12px 0px rgba(0,0,0,.18);
 }
@@ -34,24 +34,13 @@ body {
 }
 
 .group input {
-	width: 48%;
-}
-
-.input {
+	width: 100%;
 	border: none;
 	outline: none;
 	border-bottom: 2px solid #808080;
-	color: eee;
 	padding: 8px 6px;
 	box-sizing: border-box;
-}
-
-.result-container {
-	margin-top: 16px;
-}
-
-.result-container input {
-	width: 100%;
+	font-size: 140%;
 }
 
 .btn-group {
@@ -63,20 +52,20 @@ body {
 .btn-group button {
 	border: none;
 	outline: none;
-	background: #5ca5cc;
+	background: #1e88e5;
 	color: #fff;
-	width: 16%;
+	width: 22%;
 	box-sizing: border-box;
 	padding: 8px 10px;
 	font-size: 110%;
-	box-shadow: 2px 2px 6px 0px rgba(0,0,0,.24);
+	box-shadow: 2px 2px 6px 0px rgba(0,0,0,.18);
 	border-radius: 8px;
 	cursor: pointer;
-	transition: all .2s ease-in-out;
+	transition: all .3s ease-in-out;
 }
 
-.btn-group button:hover {
-	box-shadow: 4px 4px 12px 0px rgba(0,0,0,.28);
+.btn-group button:active {
+	box-shadow: 2px 6px 8px 0px rgba(0,0,0,.18);
 }
 
 .notice {
