@@ -35,9 +35,4 @@ $(document).ready(function() {
 	$('.clear').on('click', function() {
 		clear();
 	});
-
-	//Click event for fork me
-	$('.fork-me img').on('click', function() {
-		window.location.href = "http://github.com/RaajNadar/SimpleCalculator";
-	});
 });
